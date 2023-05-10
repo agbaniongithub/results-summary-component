@@ -1,0 +1,243 @@
+/* variable declaration */
+:root {
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    --Lightslate-blue: hsl(252, 100%, 67%);
+    --Lightroyal-blue: hsl(241, 81%, 54%);
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Darkgray-blue: hsl(224, 30%, 27%);
+}
+
+/* display reset */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* font reset */
+html {
+    font-size: 62.5%;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+/* body element */
+body {
+    background-color: var(--Pale-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+p{
+    font-size: 1.8rem;
+}
+
+/* Containers styling */
+
+.main-container {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, .24);
+    width: 65rem;
+    border-radius: 2.5rem;
+    background-color: var(--White);
+}
+.elements-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.results-container {
+    
+    width: 50%;
+    padding: 1.6rem 2.1rem;
+    background: linear-gradient(to bottom, var(--Lightslate-blue), var(--Lightroyal-blue));
+    border-radius: 2.5rem;
+    color: var(--White);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+
+.circle-container {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    width: 50%;
+    gap: 1rem;
+}
+
+/* Text styling */
+.results-container .p-result {
+    color: var(--Light-lavender);
+    margin-bottom: 1.2rem;
+}
+.p-score {
+    color: var(--White);
+    font-size: 4rem;
+}
+.p-totalscore {
+    color: var(--Light-lavender);
+}
+.p-feedback {
+    color: var(--White);
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    
+}
+
+.p-result {
+    color: var(--White);
+    width: 20rem;
+}
+
+/* summary text styling */
+
+.summary-summary {
+    color: black;
+    font-weight: 800;
+    font-size: 1.7rem;
+    margin-left: 1rem;
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: black;
+    padding: 1.5rem 1.3rem;
+    width: 100%;
+    
+}
+
+.btn {
+    margin-top: 1rem;
+    padding: 1.5rem 1.8rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: white;
+    background: var(--Darkgray-blue);
+    margin-left: .6rem;
+    margin-right: .6rem;
+
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, var(--Lightslate-blue), var(--Lightroyal-blue));
+}
+
+.row:nth-child(1) {
+    background-color: hsla(0, 100%, 67%, .2);
+}
+.row:nth-child(1) span {
+    color: var(--Light-red);
+}
+.row:nth-child(2) {
+    background-color: hsla(39, 100%, 56%, .2)
+}
+.row:nth-child(2) span {
+    color: var(--Orangey-yellow);
+}
+.row:nth-child(3) {
+    background-color: hsla(166, 100%, 37%, .2);
+}
+.row:nth-child(3) span {
+    color: var(--Green-teal);
+}
+.row:nth-child(4) {
+    background-color: hsla(234, 85%, 45%, .2);
+}
+.row:nth-child(4) span {
+    color: var(--Cobalt-blue);
+}
+
+.row p{
+    color: gray;
+}
+
+.row p b{
+    color: var(--Darkgray-blue);
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+
+.icon-container span {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 650px) {
+
+    body{
+        align-items: center;
+        background-color: white;
+    }
+
+    .main-container {
+        box-shadow: none;
+        width: 100vw;
+    }
+
+    .elements-container {
+        flex-direction: column;
+    }
+
+    .results-container {
+        border-radius: 0 0 1rem 1rem;
+        width: 100vw;
+    }
+
+    .summary-container {
+        width: 100vw;
+    }
+
+    .p-result {
+        
+        width: 30rem;
+    }
+
+}
+
+/* footer design */
+.attribution { font-size: 11px; text-align: center; margin-top: 10rem; }
+.attribution a { color: hsl(228, 45%, 44%); }
